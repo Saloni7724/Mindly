@@ -1,0 +1,114 @@
+.about-container {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background: #f9fafc;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(120deg, #667eea, #764ba2);
+  color: white;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Mission Section */
+.about-mission {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 10%;
+  gap: 40px;
+  background: white;
+}
+
+.mission-text {
+  flex: 1;
+}
+
+.mission-text h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.mission-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.mission-image {
+  flex: 1;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.about-features {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.about-features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  font-size: 36px;
+  color: #764ba2;
+  margin-bottom: 15px;
+}
+
+/* Team Section */
+.about-team {
+  padding: 70px 20px;
+  text-align: center;
+  background: #f1f3f8;
+}
+
+.about-team h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.about-team p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+  font-size: 16px;
+}

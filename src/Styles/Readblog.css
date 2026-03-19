@@ -1,0 +1,362 @@
+.loading-read-outer {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-read-inner {
+  width: 50px;
+  height: 50px;
+  border-top: 6px solid #a0a0a0; /* Loader color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Actual Content CSS*/
+
+.read-outer-div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+   flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+}
+
+.read-header-part {
+  width: 50%;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.read-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+}
+
+.read-description {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #676767;
+  text-align: justify;
+}
+
+.user-detail-read-card {
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.user-detail-read-card > img {
+  width: 50px;
+  border-radius: 100%;
+}
+.upper-side,
+.bottom-side {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 2px;
+}
+
+.profile-name,
+.follow-read {
+  font-size: medium;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/*.follow-read {
+  background-color: transparent;
+  border: none;
+  color: #1a8917;
+  cursor: pointer;
+}*/
+.follow-read {
+  background: white;
+  color: black;
+
+  border: none;           /* ❌ remove border */
+  outline: none;          /* ❌ remove outline (on click) */
+
+  padding: 6px 14px;
+  border-radius: 20px;    /* optional nice rounded look */
+
+  cursor: pointer;
+
+  z-index: 9999;
+  position: relative;
+}
+
+.follow-read:hover {
+  background-color: #c8c7c7;
+}
+.bottom-read-text,
+.uploded-on {
+  font-size: small;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #676767;
+}
+
+.original-part-blog {
+  width: 50%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.original-part-blog > p {
+  font-size: 20px;
+  font-family: "IBM Plex Serif", system-ui;
+  text-align: justify;
+  margin-top: 5px;
+}
+
+.original-part-blog > p > a {
+  color: #2b2b2b;
+  font-family: "IBM Plex Serif", system-ui;
+}
+.original-part-blog > p > img {
+  width: 80%;
+  display: block; /* Makes the image a block element */
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.original-part-blog > blockquote {
+  font-family: "IBM Plex Serif", system-ui;
+  font-style: italic;
+  font-size: 20px;
+  color: #676767;
+  border-left: 2px solid #8f8f8f;
+  padding-left: 5px;
+  letter-spacing: 1px;
+  margin: 10px 0px 10px 0px;
+}
+
+.original-part-blog > pre {
+  font-family: "Courier New", Courier, "Fira Code", monospace; /* Monospaced font */
+  font-size: 16px;
+  background-color: #2b2b2b; /* Dark background tone */
+  color: #e0e0e0; /* Light font color for readability */
+  padding: 16px; /* Adequate padding for block code */
+  border-radius: 8px; /* Smooth, rounded corners */
+  overflow-x: auto; /* Enable horizontal scrolling for long lines */
+  white-space: pre-wrap; /* Preserve formatting but wrap lines when necessary */
+  word-wrap: break-word; /* Prevent words from overflowing */
+  box-sizing: border-box; /* Include padding and borders in the element's width */
+  max-width: 100%; /* Ensure the pre block doesn't exceed its container width */
+  border: 1px solid #444;
+}
+
+.original-part-blog > h3,
+.original-part-blog > ol > li > strong {
+  font-family: "IBM Plex Serif", system-ui;
+  color: #2b2b2b;
+}
+
+.original-part-blog > ol {
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+.original-part-blog > ul > li {
+  margin-left: 60px;
+  margin-top: 5px;
+  font-family: "IBM Plex Serif", system-ui;
+  color: #2b2b2b;
+}
+
+.tag-read,
+.bottom-read-blog-comment-like-section {
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+.bottom-read-blog-comment-like-section {
+  border-top: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.like-post {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.tag-read-text {
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  font-weight: 500;
+  color: #2b2b2b;
+  margin-top: 10px;
+}
+.tags-read {
+  width: 30%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: small;
+  background-color: #f8f8f8;
+  color: #676767;
+  font-weight: 400;
+  border: #d8d8d8 1px solid;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.user-detail-follow {
+  width: 100%;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+
+.user-detail-bottom-read {
+  width: 50%;
+  height: auto;
+}
+
+.user-detail-bottom-read > img {
+  width: 80px;
+  margin-top: 20px;
+  border-radius: 100%;
+}
+
+.user-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.follow-bottom-read {
+  background-color: rgb(48, 48, 48);
+  border: none;
+  padding: 10px 25px 10px 25px;
+  color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(27, 27, 27);
+  }
+}
+
+.already-follow {
+  background-color: transparent;
+  border: none;
+  color: #1a8917;
+  cursor: pointer;
+}
+.profile-name-bottom,
+.bottom-user-desc {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #2b2b2b;
+  cursor: pointer;
+}
+.bottom-user-desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: #676767;
+}
+.toggle-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidebar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0; /* Align sidebar to the right */
+  height: 100vh; /* Full height of the viewport */
+  width: 300px;
+  background-color: white; /* Set background color to white */
+  border: 1px solid black;
+  color: black; /* Set text color to black for contrast */
+  padding: 20px;
+  transform: translateX(100%); /* Hidden by default (off-screen to the right) */
+  transition: transform 0.3s ease;
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Slide in when open */
+}
+
+.icon-container {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-container:active {
+  transform: scale(0.95); /* Slight shrink on click */
+}
+
+/* Base Icon Styles */
+.icon {
+  transition: fill 0.2s ease-in-out, transform 0.3s ease;
+}
+
+/* Outlined Icon Style */
+.icon.outlined {
+  stroke: #2b2b2b; /* Outline color */
+  fill: none; /* No fill */
+}
+
+/* Filled Icon Style with Animation */
+.icon.filled {
+  stroke: #2b2b2b; /* Stroke for outline */
+  fill: #2b2b2b; /* Heart red */
+  animation: bump 0.3s ease; /* Bumping effect */
+}
+
+/* Bump Animation */
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Slightly larger */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

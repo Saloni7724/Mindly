@@ -1,0 +1,195 @@
+.setupyourprofile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Default hidden */
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border: 1px solid #b0b0b0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.01),
+              0px 5px 4px rgba(3, 7, 18, 0.02),
+              0px 12px 9px rgba(3, 7, 18, 0.02),
+              0px 20px 15px rgba(3, 7, 18, 0.03),
+              0px 32px 24px rgba(3, 7, 18, 0.04);
+}
+
+.setupyourprofile.show {
+  display: flex; /* Show when 'show' class is added */
+}
+  
+  .profilepicture-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;   /* VERY IMPORTANT */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+  
+.profilepicture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #3f3f3f;
+}
+
+  
+  .nameanddescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 70%;
+  }
+  
+  .nameanddescription > input {
+    width: 80%;
+    font-family: "Roboto", system-ui;
+    outline: none;
+    border: none;
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+  }
+  
+  .name {
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  
+  .description {
+    font-size: 1.2em; 
+    font-weight: 400;
+    color: #676767;
+  }
+  
+  .profileactualdetail {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Space above the profile section */
+  }
+  
+  .setuprofiletext {
+    font-weight: 300;
+    margin-top: 10px;
+    margin-left: 5%;
+    letter-spacing: 2px;
+    color: #676767;
+  }
+
+  .continuebutton{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  .continue{
+    cursor: pointer;
+    width: 30%;
+    padding: 10px;
+    background-color: #484848;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    &:hover {
+      background-color: #313131;
+    }
+  }
+  .selectTag {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow tags to wrap to the next line */
+    gap: 10px; /* Space between tags */
+    margin: 20px auto; /* Center the container */
+    justify-content: center; /* Center the tags horizontally */
+    max-width: 80%; /* Limit the width of the container (optional) */
+    max-height: 300px;
+    overflow: hidden; /* Hide scrollbar */
+  overflow-y: auto; /* Enable vertical scrolling */
+  }
+  .selectTag::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  .tagItem {
+    border: 1px solid #3f3f3f;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Roboto", system-ui;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.tagItem.active {
+  border: 1px solid #3f3f3f;
+    background-color: #3f3f3f; /* Change to your preferred active color */
+    color: white; /* Change text color for active state */
+}
+
+.continuebutton1{
+  width: 80%;
+  display: flex;
+  justify-content:center;
+}
+
+.profileAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: #e9e9e9;
+}
+
+.profileAvatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileAvatarFallback {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+
+.avatarBox{
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9e9e9;
+}
+
+.avatarImg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarInitials{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #222;
+}
+

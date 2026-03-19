@@ -1,0 +1,58 @@
+.your-story-bottom {
+  margin-top: 100px;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.your-post-tag {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Roboto", system-ui;
+  letter-spacing: 1px;
+  color: #444;
+  font-style: normal;
+}
+
+.buttons {
+  width: 80%;
+  border-bottom: 1px solid #d8d8d8;
+  margin-top: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.buttons > button {
+  height: 100%;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: #676767;
+  margin-left: 100px;
+}
+
+.draft.active,
+.published.active {
+  border-bottom: #444 2px solid;
+  color: black;
+}
+
+.no-data-message {
+  width: 80%;
+  height: 100px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", system-ui;
+  letter-spacing: 1px;
+  color: #444;
+  font-style: normal;
+}
+
+.storyPoster {
+  width: 80%;
+  margin-top: 30px;
+}

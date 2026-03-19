@@ -1,0 +1,30 @@
+.search-param {
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.blogs-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blog-item-search {
+  margin-top: 10px;
+  width: 65%;
+}
+
+.search-blog-no-data-found {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}

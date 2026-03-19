@@ -1,0 +1,107 @@
+.terms-container {
+  min-height: 100vh;
+  background: #f5f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.terms-card {
+  max-width: 850px;
+  width: 100%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.terms-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.terms-updated {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+section h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+section p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+section li {
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.terms-footer {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.terms-back-btn {
+  padding: 8px 16px;
+  background: #1a8917;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.terms-back-btn:hover {
+  background: #146c12;
+  transform: translateY(-2px);
+}
+
+/* 🌙 Dark Mode */
+body.dark .terms-container {
+  background: #121212;
+}
+
+body.dark .terms-card {
+  background: #1e1e1e;
+  box-shadow: none;
+}
+
+body.dark .terms-title,
+body.dark section h2 {
+  color: #ffffff;
+}
+
+body.dark section p,
+body.dark section li {
+  color: #cfcfcf;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .terms-card {
+    padding: 25px;
+  }
+
+  .terms-title {
+    font-size: 24px;
+  }
+
+  section h2 {
+    font-size: 16px;
+  }
+}

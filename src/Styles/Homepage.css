@@ -1,0 +1,349 @@
+.makeblur {
+  position: relative; 
+}
+
+.makeblur::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease, backdrop-filter 1s ease;
+}
+
+.makeblur.active::before {
+  opacity: 1;
+  backdrop-filter: blur(1px);
+  pointer-events: all;
+}
+
+.header {
+  background-color: #fcfcfc;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+  width: 100%;
+}
+.sitename {
+  flex: 1;
+  font-family: "Spirax", system-ui;
+  font-weight: 400;
+  margin-left: 5%;
+}
+.headerpart {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 5%;
+}
+.homepagebuttons {
+  text-decoration: none;
+  color: rgb(61, 61, 61);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 5px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.homepagebuttons:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+.signinbutton {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 10px 50px;
+  border-radius: 20px;
+  background-color: #2d2d2d;
+  color: white;
+  transition: all 0.3s ease;
+}
+.signinbutton:hover {
+  color: black;
+  background-color: transparent;
+  border: 1px solid #2d2d2d;
+}
+.headerbottom {
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 100%;
+  display: flex;
+  padding: 20px;
+}
+.headerbottom > img {
+  flex: 1;
+  margin-left: 1%;
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+.headerbottomcontent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.thought1,
+.thought2 {
+  width: 65%;
+  font-family: "Scheherazade New", serif;
+  font-weight: 300;
+  font-size: 50px;
+  margin: 5px 0;
+  padding: 5px;
+}
+.thought2 {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 20px;
+  border-bottom: 2px solid black;
+  width: 45%;
+}
+.qoute {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  margin: auto;
+  padding: 5px;
+  letter-spacing: 2px;
+}
+.getstarted {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 35%;
+  margin-top: auto;
+  margin-left: auto;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 15px 20px;
+  border-radius: 30px;
+  background-color: #2d2d2d;
+  color: white;
+  transition: all 0.3s ease;
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+.getstarted:hover {
+  color: black;
+  background-color: transparent;
+  width: 40%;
+  border: 1px solid #2d2d2d;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0; /* Ensures footer is at the bottom */
+  left: 0;
+  right: 0;
+  background-color: #fcfcfc;
+  border-top: 1px solid #dbdbdb;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.footerpart {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footerbutons {
+  text-decoration: none;
+  color: #626262;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 5px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.footerbutons:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+.commonbutton {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10000%);
+  transition: all 0.5s ease;
+  z-index: 9999;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 350px;
+  box-shadow: 0px 0px 1px rgba(3, 7, 18, 0.02), 0px 0px 4px rgba(3, 7, 18, 0.03),
+    0px 1px 9px rgba(3, 7, 18, 0.05), 0px 2px 15px rgba(3, 7, 18, 0.06),
+    0px 3px 24px rgba(3, 7, 18, 0.08);
+}
+
+.commonbutton.show {
+  transform: translate(-50%, -50%);
+}
+
+/*This CSS is for Login from */
+.sitename1 {
+  width: 100%;
+  font-family: "Spirax", system-ui;
+  font-weight: 400;
+}
+.thought {
+  width: 100%;
+  color: rgb(61, 61, 61);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: small;
+  font-style: normal;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #676767;
+}
+.inputfields {
+  width: 100%;
+}
+
+.labelofinput {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: small;
+  font-style: normal;
+  margin-top: 10%;
+}
+.input {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  height: 25px;
+  border: 1px solid #676767;
+  border-radius: 5px;
+}
+
+.inputfield {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+.forgot {
+  width: 100%;
+  cursor: pointer;
+  text-align: end;
+}
+.forgotpassword {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: small;
+  font-style: normal;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: #626262;
+  &:hover {
+    color: black;
+  }
+}
+
+.signin {
+  cursor: pointer;
+  margin-top: 10%;
+  width: 100%;
+  padding: 10px;
+  background-color: #484848;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    background-color: #313131;
+  }
+}
+.alreadytext {
+  width: 100%;
+  cursor: pointer;
+  margin-top: 5%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: small;
+  font-style: normal;
+  text-decoration: none;
+  color: #626262;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    color: black;
+  }
+}
+
+.confirmPassword {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.commonbutton-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: height 0.5s ease; /* Smooth transition for height */
+  overflow: hidden; /* Hide overflow to ensure smooth animation */
+  z-index: 9999;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 350px;
+  box-shadow: 0px 0px 1px rgba(3, 7, 18, 0.02), 0px 0px 4px rgba(3, 7, 18, 0.03),
+    0px 1px 9px rgba(3, 7, 18, 0.05), 0px 2px 15px rgba(3, 7, 18, 0.06),
+    0px 3px 24px rgba(3, 7, 18, 0.08);
+}
+
+.loader {
+  animation: spin 2s linear infinite;
+  width: 20px;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
