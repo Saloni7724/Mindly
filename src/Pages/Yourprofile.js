@@ -157,6 +157,7 @@ export default function Yourprofile() {
 
     if (followeeIds.length) getAllFollowers();
   }, [followeeIds]);
+  console.log(followerDataIds);
 
 const getAllFollowersData = async (list) => {
   if (!Array.isArray(list) || list.length === 0) return;
