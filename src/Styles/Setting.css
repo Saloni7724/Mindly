@@ -1,17 +1,17 @@
 .settings-page {
-  background: #f5f6f8;
+ 
   min-height: 100vh;
-  padding: 20px;
+  padding: 40px 20px;   /* ✅ FIXED */
   font-family: "Inter", sans-serif;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;  /* ✅ CENTER */
 }
-
 /* CENTERED MAIN CONTAINER */
 .settings-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 900px;   /* controls width */
 }
 
 /* HEADER */
@@ -48,26 +48,72 @@
 
 /* AVATAR */
 .avatar {
-  width: 35px;
-  height: 35px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3b82f6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
-
 /* CARD */
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
+.card1 {
+  background: var(--card-color);  /* ✅ FIX */
+  color: var(--text-color);       /* ✅ ADD */
+  border-radius: 12px;
+  padding: 20px 24px;   /* 🔥 FIX */
   margin-bottom: 20px;
   border: 1px solid #e5e7eb;
-}
+  width: 100%;
+  box-sizing: border-box;
 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* optional nice UI */
+}
+.card1 h3 {
+  margin-bottom: 15px;
+}
 /* RADIO */
 .radio {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* hide default radio */
+.radio input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* hover effect */
+.radio input:hover {
+  border-color: #3b82f6;
+}
+
+/* checked state */
+.radio input:checked {
+  border-color: #3b82f6;
+}
+
+/* inner dot */
+.radio input:checked::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #3b82f6;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* TIME ROW */
@@ -90,6 +136,7 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px; /* add spacing */
 }
 
 /* TEXT */
@@ -99,7 +146,8 @@ select {
 
 .sub {
   font-size: 12px;
-  color: gray;
+   color: var(--text-color);
+  opacity: 0.6;
 }
 
 /* BUTTON */
@@ -125,8 +173,9 @@ select {
 .table-head,
 .table-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px 0;
+  grid-template-columns: 1.2fr 1fr 1fr; /* 🔥 FIX */
+  padding: 12px 0;
+  align-items: center;
 }
 
 .table-head {
@@ -142,9 +191,10 @@ select {
 input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  box-sizing: border-box; /* 🔥 IMPORTANT */
 }
 
 /* TOGGLE */

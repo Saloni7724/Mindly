@@ -124,7 +124,7 @@
 }
 
 .content > .icon {
-  color: "#676767";
+    color: black;
   &:hover {
     color: black; /* Change the icon color to black on hover (if applicable) */
   }

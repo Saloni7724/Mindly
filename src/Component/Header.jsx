@@ -190,7 +190,7 @@ useEffect(() => {
         <div className="search-input-div">
           <Search
             size={20}
-            style={{ color: "#676767", cursor: "pointer" }}
+            style={{ color: "#3f3f3f", cursor: "pointer" }}
             onClick={gotoSearch}
           />
           <input

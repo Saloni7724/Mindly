@@ -5,7 +5,8 @@ import { ArrowRight, Eye, EyeOff, Loader2, X } from "lucide-react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth, db } from "../Backend/firebase-init";
-
+import { saveSession } from "../Utils/saveSession"; // you already have this
+import { updateDoc } from "firebase/firestore"; // for step 9
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -61,11 +62,19 @@ useEffect(() => {
         return;
       }
 
-      // normal login
+      // 🔹 Step 9: Reset forceLogout flag
+      if (snap.exists() && snap.data()?.forceLogout) {
+        await updateDoc(userRef, { forceLogout: false });
+      }
+
+      // 🔹 Step 2: Create session
       const sessionId = generateRandomId();
       localStorage.setItem("sessionId", sessionId);
 
       await setDoc(userRef, { activeSession: sessionId }, { merge: true });
+      
+      // 🔹 Save session in userSessions subcollection
+      await saveSession(user);
 
       navigate("/");
     } catch (err) {
@@ -76,6 +85,10 @@ useEffect(() => {
 
   return () => unsubscribe();
 }, [navigate]);
+
+      
+
+      
 
   const closeForm = (value) => {
     setIsForgotPassword(false);
